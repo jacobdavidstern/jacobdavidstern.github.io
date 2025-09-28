@@ -1,0 +1,19 @@
+# .gitignore
+
+# Dependency folders — never tracked
+node_modules/
+dist/
+build/
+
+# archive folder — privatized but structurally preserved
+archive/*                 # ignore all contents
+!archive/.gitkeep         # keep placeholder for folder tracking
+
+# Logs and environment files — local only
+*.log
+.env
+
+# Optional: editor or OS artifacts (uncomment if needed)
+.DS_Store
+# Thumbs.db
+# *.swp

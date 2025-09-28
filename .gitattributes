@@ -1,0 +1,22 @@
+# .gitattributes
+#
+# Git *does* track these files—this file controls *how* they're handled.
+# Use for:
+# - Clean exports (e.g., zip via `git archive`)
+# - Language stats and diff behavior
+# - Line-ending normalization
+
+# Example to silence /labs folder in exports and stats
+# exclude from git archive
+labs/.gitkeep export-ignore
+# exclude from GitHub language stats
+labs/.gitkeep linguist-generated
+# exclude entire folder from archive exports
+labs/ export-ignore
+# disable line-ending normalization (optional)
+# labs/.gitkeep -text
+
+# Notes:
+# - `export-ignore`: skips file/folder in `git archive`, but still visible on GitHub
+# - `linguist-generated`: tells GitHub to treat file as auto-generated (excluded from stats)
+# - `-text`: disables line-ending normalization (avoids CRLF vs LF diffs across platforms)

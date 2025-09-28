@@ -1,0 +1,109 @@
+// VS Code settings for buzzcut concept repo
+// Focused on reproducible formatting, linting, and semantic layout scaffolding
+// Bootcamp-pushed extensions settings retained for compatibility
+{
+  // File visibility and search
+  "files.exclude": {
+    "**/.gitignore": false,
+    "**/.env": false,
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/*.log": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+  },
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  // Editor behavior and code style
+  "editor.accessibilitySupport": "off",
+  "editor.scrollbar.horizontalScrollbarSize": 18,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.wordSegmenterLocales": ["en-US"],
+  "editor.wordWrap": "on",
+  "editor.quickSuggestions": {
+    "other": true, // false
+    "comments": false,
+    "strings": true // false
+  },
+  // Bootcamp: autocomplete control
+  "editor.suggestOnTriggerCharacters": true, // Emmet (default)
+  "editor.acceptSuggestionOnEnter": "on", // Emmet (default)
+  "editor.hover.enabled": true, // MDN hover (default)
+  "editor.hover.delay": 2000, // MDN hover
+  "html.hover.documentation": true, // MDN hover (default)
+  "html.hover.references": true, // MDN hover (default)
+  "css.hover.documentation": true, // MDN hover (default)
+  "editor.inlineSuggest.enabled": true, // grey-text inline (false)
+  "editor.wordBasedSuggestions": "matchingDocuments", // mix-in content from open files ("off")
+  "editor.parameterHints.enabled": true, // function parameter help (false)
+  "editor.lightbulb.enabled": "onCode", // quick fixes refactor suggest ("off")
+  "editor.codeLens": true, // references, git info (false)
+  // Prettier and formatting
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.configPath": "./prettier.config.cjs",
+  "prettier.prettierPath": "./node_modules/prettier",
+  "prettier.requireConfig": true,
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "dbaeumer.vscode-eslint" },
+  "prettier.jsxSingleQuote": true,
+  "editor.formatOnPaste": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.snippetSuggestions": "top",
+  // Emmet
+  "emmet.includeLanguages": {
+    "html": "html",
+    "javascript": "html",
+    "markdown": "html",
+    "plaintext": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.preferences": {
+    "selfClosingStyle": "html"
+  },
+  "editor.tabCompletion": "on",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  // Workbench appearance
+  "workbench.iconTheme": "vscode-icons",
+  // Extensions and integrations
+  // Miscellaneous
+  "json.schemas": [],
+  "html.validate.scripts": true,
+  "html.validate.styles": true,
+  "javascript.validate.enable": true,
+  "git.openRepositoryInParentFolders": "always",
+  "files.trimFinalNewlines": false,
+  // HTMLHint
+  "htmlhint.enable": true,
+  "htmlhint.exclude": ["**/*.js", "**/*.jsx"], // optional: prevent JS linting
+  "htmlhint.ignoreGitignore": true,
+  "htmlhint.options": {
+    "attr-lowercase": true,
+    "attr-value-double-quotes": false, // allows single quotes in HTML attributes
+    "doctype-first": false,
+    "meta-charset-require": true,
+    "meta-viewport-require": true,
+    "tagname-lowercase": false,
+    "title-require": true
+  },
+  "editor.formatOnSave": true,
+  "markdown-checkbox.checkmark": "x",
+  "markdown-checkbox.dateWhenChecked": false,
+  "markdown-checkbox.italicWhenChecked": false,
+  "markdown-checkbox.strikeThroughWhenChecked": false,
+  "markdown-checkbox.withBulletPoint": false,
+  "html.completion.attributeDefaultValue": "singlequotes"
+}
