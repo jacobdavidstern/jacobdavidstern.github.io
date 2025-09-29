@@ -1,12 +1,12 @@
 {
-  "name": "fse-instructor",
-  "description": "Instructor-led showcase in CommonJS mode from Codecademy's Full Stack Engineer program.",
+  "name": "jacobdavidstern.github.io",
+  "description": "Live portfolio and concept showcase using semantic HTML and modular CSS.",
   "author": "Jacob Stern",
   "version": "1.0.0",
   "license": "MIT",
   "private": true,
   "type": "commonjs",
-  "homepage": "https://github.com/jacobdavidstern/fse-instructor#readme",
+  "homepage": "https://jacobdavidstern.github.io/",
   "scripts": {
     "lint": "eslint . --ext .js,.cjs",
     "lint:htmlhint": "htmlhint '**/*.html'",
@@ -22,9 +22,7 @@
     "test": "echo \"TBD test\" && exit 0"
   },
   "keywords": [
-    "full-stack-engineer",
-    "bootcamp",
-    "showcase"
+    "full-stack-engineer"
   ],
   "devDependencies": {
     "@awmottaz/prettier-plugin-void-html": "^1.9.0",

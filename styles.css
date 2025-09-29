@@ -61,10 +61,21 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Buttons */
 
-.btn:hover,
-.btn:focus {
+.btn:hover {
   opacity: 0.9;
-  outline: none;
+}
+
+/* Preserve and style focus rings for keyboard accessibility. Use
+   :focus-visible so mouse users don't see the ring but keyboard users do. */
+.btn:focus-visible {
+  outline: none; /* remove the browser default */
+  box-shadow: 0 0 0 0.25rem rgba(123, 104, 238, 0.35); /* accessible ring */
+  border-radius: 20px;
+}
+
+/* Tweak for outlined GitHub buttons to use a subtle dark ring */
+.btn-outline-github:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.35);
 }
 
 .btn {
@@ -91,22 +102,24 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
-.btn-outline-live-site {
-  background-color: transparent;
-  border: 1.5px solid var(--bs-primary);
-  color: var(--bs-primary);
+.btn-outline-github {
+  background-color: transparent !important; /* override Bootstrap */
+  border: 1.5px solid var(--bs-dark) !important; /* override Bootstrap */
+  color: var(--bs-dark) !important; /* override Bootstrap */
+  border-radius: 50rem !important; /* override Bootstrap */
 }
 
-.btn-outline-github {
-  background-color: transparent;
-  border: 1.5px solid var(--bs-dark);
-  color: var(--bs-dark);
+/* Ensure focus (keyboard and mouse click) shows a visible ring. */
+.btn-outline-github:focus,
+.btn-outline-github:focus-visible {
+  outline: none !important; /* override Bootstrap */
+  box-shadow: 0 0 0 0.25rem rgba(33, 37, 41, 0.45) !important; /* dark translucent ring */ /* override Bootstrap */
 }
 
 /* Hero */
 
 .hero-lead {
-  max-width: 480px;
+  max-width: 440px;
 }
 
 .hero-image {
@@ -114,8 +127,8 @@ h1, h2, h3, h4, h5, h6 {
   height: 230px;
   border-radius: 50%;
   object-fit: cover;
-  padding: 0.75rem;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  flex: 0 0 auto;
+  display: inline-block;
 }
 
 /* Projects */
@@ -267,8 +280,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .metric-card-header {
-  color: var(--bs-primary);
-  margin-top: 1.5rem;
+  color: var(--bs-primary) !important; /* override Bootstrap */
+  margin-top: 2rem !important; /* override Bootstrap */
 }
 
 /* Contact (socials) */
