@@ -5,15 +5,11 @@ node_modules/
 dist/
 build/
 
-# archive folder — privatized but structurally preserved
-archive/*                 # ignore all contents
-!archive/.gitkeep         # keep placeholder for folder tracking
-
 # Logs and environment files — local only
 *.log
 .env
+.history/			# Local History extension creates a .history/ in each workspace
+**/.history/
 
-# Optional: editor or OS artifacts (uncomment if needed)
+# Optional: editor or OS artifacts
 .DS_Store
-# Thumbs.db
-# *.swp
